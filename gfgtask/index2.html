@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+</head>
+<body>
+
+    <h2>Event Registration Form</h2>
+    <form action="/submit_registration" method="post" enctype="multipart/form-data">
+        <!-- Personal Details -->
+        <fieldset>
+            <legend>Personal Details</legend><br><br>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required><br><br>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+        </fieldset>
+<br><br>
+        <!-- Event Details -->
+        <fieldset>
+            <legend>Event Details</legend>
+
+            <label for="category">Participant Category</label><br><br>
+            <select id="category" name="category" required>
+                <option value="">Select...</option>
+                <option value="day_scholar">Day Scholar</option>
+                <option value="hosteller">Hosteller</option>
+            </select>
+
+            <label for="event">Event Name</label>
+            <input type="text" id="event" name="event" placeholder="Enter the event name" required>
+
+            <label for="preferences">Food Preferences</label><br><br>
+            <select id="preferences" name="preferences">
+                <option value="">Select...</option>
+                <option value="veg">Vegetarian</option>
+                <option value="non_veg">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        </fieldset>
+
+        <!-- Feedback -->
+        <fieldset>
+            <legend>Feedback</legend>
+            <label for="feedback">Any Suggestions or Comments</label>
+            <textarea id="feedback" name="feedback" placeholder="Share your feedback here..." rows="4"></textarea>
+        </fieldset>
+
+        <!-- Pass Collection -->
+        <fieldset>
+            <legend>Pass Collection</legend>
+            <label for="id_proof">Upload ID Proof</label>
+            <input type="file" id="id_proof" name="id_proof" accept="image/*,.pdf" required>
+        </fieldset>
+
+        <!-- Payment Section -->
+        <fieldset>
+            <legend>Payment Details</legend>
+            <label for="payment_method">Payment Method</label><br><br>
+            <select id="payment_method" name="payment_method" required>
+                <option value="">Select...</option>
+                <option value="credit_card">Credit Card</option><br><br>
+                <option value="debit_card">Debit Card</option>
+                <option value="net_banking">Net Banking</option><br><br>
+                <option value="upi">UPI</option><br><br>
+                <option value="paypal">PayPal</option>
+            </select>
+<br><br>
+            <label for="card_number">Card Number</label>
+            <input type="text" id="card_number" name="card_number" placeholder="Enter your card number" pattern="[0-9]{16}" required><br><br>
+
+            <label for="expiry_date">Expiry Date</label>
+            <input type="month" id="expiry_date" name="expiry_date" required><br><br>
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" placeholder="Enter CVV" pattern="[0-9]{3}" required><br><br>
+
+            <label for="upi_id">UPI ID (if applicable)</label>
+            <input type="text" id="upi_id" name="upi_id" placeholder="Enter your UPI ID"><br><br>
+        </fieldset>
+
+        <button type="submit">Submit Registration</button><br><br>
+    </form>
+
+</body>
+</html>
